@@ -4,12 +4,12 @@ A custom-built Security Information and Event Management (SIEM) dashboard design
 
 
 # 🔧 Features
-🌙 Dark/Light Mode — Seamless toggle between light and dark UI for better accessibility and UX.
-🌍 Geo-IP Blocking — Automatically blocks suspicious IPs based on geolocation data.
-🛡️ Vulnerability Detection — Detects potential system vulnerabilities using pattern matching and custom scripts.
-📈 Access Log Visualization — Displays real-time logs, source IPs, actions, and threat levels.
-📊 Interactive Charts & Dashboard — Graphs and tables powered by Chart.js for visual security analytics.
-🔐 Secure Salt Authentication — Login system protected using salted password hashing.
+- 🌙 Dark/Light Mode — Seamless toggle between light and dark UI for better accessibility and UX.
+- 🌍 Geo-IP Blocking — Automatically blocks suspicious IPs based on geolocation data.
+- 🛡️ Vulnerability Detection — Detects potential system vulnerabilities using pattern matching and custom scripts.
+- 📈 Access Log Visualization — Displays real-time logs, source IPs, actions, and threat levels.
+- 📊 Interactive Charts & Dashboard — Graphs and tables powered by Chart.js for visual security analytics.
+- 🔐 Secure Salt Authentication — Login system protected using salted password hashing.
 
 # Objective
 
@@ -24,7 +24,8 @@ Again Add Input
 Select Submit
 Note: For all future panel, set the time to time_range for consistency.
 
-
+# Project Demo
+https://github.com/Krisanjana/Splunk-SIEM-Dashboard/issues/1
 
 
 
