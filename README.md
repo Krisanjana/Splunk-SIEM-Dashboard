@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 ## Goal: Give a quick summary of SSH activity.
 
-- Total SSH Events
+1 Total SSH Events
 - Click on Add Panel
 - Under New, choose Single Value
 - Use Shared Time Picker time_range
@@ -42,7 +42,8 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
  
   `source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
  | stats count AS "Total SSH Events"`
-
+## Lad Img
+<img width="1898" height="781" alt="Screenshot 2026-08-29 154236" src="https://github.com/user-attachments/assets/65b4b1ce-43f0-4e81-8004-2d22643d3e00" />
 
 
 
