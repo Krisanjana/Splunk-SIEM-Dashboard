@@ -16,18 +16,32 @@ A custom-built Security Information and Event Management (SIEM) dashboard design
 # Lab Set up
 
 # Task0: Setting up Time Range
-Add Time Range Button
-Click on Add Input
-Select Time and click on pencil icon
-Set Label to Time Range and Token time_range
-Again Add Input
-Select Submit
-Note: For all future panel, set the time to time_range for consistency.
+- Add Time Range Button
+- Click on Add Input
+- Select Time and click on pencil icon
+- Set Label to Time Range and Token time_range
+- Again Add Input
+- Select Submit
+- Note: For all future panel, set the time to time_range for consistency.
 
 # Project Demo
 https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
+# Task1: Authentication Overview Panels
 
+## Goal: Give a quick summary of SSH activity.
+
+- Total SSH Events
+- Click on Add Panel
+- Under New, choose Single Value
+- Use Shared Time Picker time_range
+- Set Content Title to "Total SSH Events"
+- Enter the Search String as below
+
+
+  markdown
+  source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
+ | stats count AS "Total SSH Events"
 
 
 
