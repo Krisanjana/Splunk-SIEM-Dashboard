@@ -39,9 +39,9 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 - Enter the Search String as below
 
 
-  markdown
-  source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
- | stats count AS "Total SSH Events"
+ 
+  `source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
+ | stats count AS "Total SSH Events"`
 
 
 
