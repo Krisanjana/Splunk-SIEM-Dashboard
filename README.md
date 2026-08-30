@@ -31,19 +31,130 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 ## Goal: Give a quick summary of SSH activity.
 
-1 Total SSH Events
+### 1. Total SSH Events
 - Click on Add Panel
 - Under New, choose Single Value
 - Use Shared Time Picker time_range
 - Set Content Title to "Total SSH Events"
 - Enter the Search String as below
 
-
- 
-  `source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
- | stats count AS "Total SSH Events"`
+  `source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json"
+  | stats count AS "Total SSH Events"`
 ## Lad Img
 <img width="1898" height="781" alt="Screenshot 2026-08-29 154236" src="https://github.com/user-attachments/assets/65b4b1ce-43f0-4e81-8004-2d22643d3e00" />
 
+### 2.Successful Logins
+- Click on Add Panel
+
+- Under New, choose Single Value
+
+- Use Shared Time Picker time_range
+
+- Set Content Title to "Successful Logins"
+
+- Enter the Search String as below:
+
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json"  event_type="Successful SSH Login" | stats count AS "Successful Logins"`
+
+## Lab Img
+<img width="1900" height="603" alt="Screenshot 2026-08-29 164201" src="https://github.com/user-attachments/assets/8069569a-b90c-431f-a2ae-36001d96dbbc" />
 
 
+### 3. Failed Logins
+- Click on Add Panel
+- Under New, choose Single Value
+- Use Shared Time Picker time_range
+- Set Content Title to "Failed Logins"
+- Enter the Search String as below:
+
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json" event_type="Failed SSH Login" | stats count AS "Failed Login"`
+
+## Lab Ing
+<img width="1902" height="698" alt="Screenshot 2026-08-29 155049" src="https://github.com/user-attachments/assets/21047dd9-0b21-4848-bf8b-d6b9d712c77e" />
+
+
+### 4. Connection without Authentication
+- Click on Add Panel
+
+- Under New, choose Single Value
+
+- Use Shared Time Picker time_range
+
+- Set Content Title to "Invalid User Attempts"
+
+- Enter the Search String as below:
+
+`index=auth "sshd" "invalid user"
+| stats count AS "Invalid User Attempts"`
+
+## Lab Img
+
+<img width="1898" height="660" alt="Screenshot 2026-08-29 155352" src="https://github.com/user-attachments/assets/7b43201c-6407-4a6c-ade2-9a45de7c6605" />
+
+
+# Task2: Login Activity Trends 
+
+## Goal: Visualize login behavior over time and detect spikes.
+
+### 1. Failed Logins by username
+- Click on Add Panel
+
+- Under New, choose Bar Chart
+
+- Use Shared Time Picker time_range
+
+- Set Content Title to "Failed Logins by username"
+
+- Enter the Search String as below:
+
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json" event_type="Failed SSH Login" | top username`
+
+## Lab Img
+
+<img width="1907" height="818" alt="Screenshot 2026-08-29 155726" src="https://github.com/user-attachments/assets/ec165458-a3de-4ecf-bca3-e3cf641afd4a" />
+
+
+### 2. Possible Brute Force
+- Click on Add Panel
+
+- Under New, choose Statstics Table
+
+- Use Shared Time Picker time_range
+
+- Set Content Title to Possible Brute Force b IP Address
+
+- Enter the Search String as below:
+
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json" event_type="Multiple Failed Authentication Attempts" | top id.orig_h`
+
+## Lab Img
+
+<img width="1907" height="815" alt="Screenshot 2026-08-29 155924" src="https://github.com/user-attachments/assets/0151bd88-0798-47d7-8a31-fdc6d5dcafad" />
+
+
+# Task3: Visualizing Brute Force attack in geo-location
+
+### 1. Visualizing Brute Force attack with geo-location
+- Click on Add Panel
+
+- Under New, choose Choropleth Map
+
+- Use Shared Time Picker time_range
+
+- Set Content Title to Brute Force attack with geo-location
+
+- Enter the Search String as below:
+
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json" event_type="Multiple Failed Authentication Attempts" 
+| table id.orig_h
+| iplocation id.orig_h
+| stats count by Country
+| geom geo_countries featureIdField="Country"`
+
+## Lab Img
+
+<img width="1912" height="968" alt="Screenshot 2026-08-29 160124" src="https://github.com/user-attachments/assets/c9011a40-a743-46e6-995c-00c31ce6c49c" />
+
+# Over View All Dashboard Img
+
+<img width="1900" height="972" alt="Screenshot 2026-08-29 160352" src="https://github.com/user-attachments/assets/bef0a489-4617-454f-8974-006c9bc380a4" />
