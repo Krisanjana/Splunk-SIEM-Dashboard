@@ -25,7 +25,7 @@ Select Submit
 Note: For all future panel, set the time to time_range for consistency.
 
 # Project Demo
-(https://github.com/Krisanjana/Splunk-SIEM-Dashboard/issues/3)
+https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 
 
