@@ -41,7 +41,8 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
   `source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json"
   | stats count AS "Total SSH Events"`
 ## Lad Img
-<img width="1898" height="781" alt="Screenshot 2026-08-29 154236" src="https://github.com/user-attachments/assets/65b4b1ce-43f0-4e81-8004-2d22643d3e00" />
+<img width="1915" height="706" alt="image" src="https://github.com/user-attachments/assets/9a40522f-b8ce-4e86-a94d-6f9d10350188" />
+
 
 ### 2.Successful Logins
 - Click on Add Panel
@@ -57,7 +58,8 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 `source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json"  event_type="Successful SSH Login" | stats count AS "Successful Logins"`
 
 ## Lab Img
-<img width="1900" height="603" alt="Screenshot 2026-08-29 164201" src="https://github.com/user-attachments/assets/8069569a-b90c-431f-a2ae-36001d96dbbc" />
+<img width="1911" height="715" alt="image" src="https://github.com/user-attachments/assets/09deedcb-675e-4b5a-8bf2-7ab30554bcec" />
+
 
 
 ### 3. Failed Logins
@@ -70,8 +72,7 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 `source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json" event_type="Failed SSH Login" | stats count AS "Failed Login"`
 
 ## Lab Ing
-<img width="1902" height="698" alt="Screenshot 2026-08-29 155049" src="https://github.com/user-attachments/assets/21047dd9-0b21-4848-bf8b-d6b9d712c77e" />
-
+<img width="1911" height="757" alt="image" src="https://github.com/user-attachments/assets/8395c68c-973c-40a4-9e00-190ec1e76c76" />
 
 ### 4. Connection without Authentication
 - Click on Add Panel
@@ -111,7 +112,7 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 ## Lab Img
 
-<img width="1907" height="818" alt="Screenshot 2026-08-29 155726" src="https://github.com/user-attachments/assets/ec165458-a3de-4ecf-bca3-e3cf641afd4a" />
+<img width="1910" height="881" alt="image" src="https://github.com/user-attachments/assets/c21afca4-210d-49f4-8ca5-e4291489a2c7" />
 
 
 ### 2. Possible Brute Force
@@ -129,7 +130,7 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 ## Lab Img
 
-<img width="1907" height="815" alt="Screenshot 2026-08-29 155924" src="https://github.com/user-attachments/assets/0151bd88-0798-47d7-8a31-fdc6d5dcafad" />
+<img width="1910" height="930" alt="image" src="https://github.com/user-attachments/assets/fe538a48-4388-4884-a05a-1f218d1799e4" />
 
 
 # Task3: Visualizing Brute Force attack in geo-location
@@ -157,4 +158,6 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 # Over View All Dashboard Img
 
-<img width="1900" height="972" alt="Screenshot 2026-08-29 160352" src="https://github.com/user-attachments/assets/bef0a489-4617-454f-8974-006c9bc380a4" />
+<img width="1912" height="972" alt="image" src="https://github.com/user-attachments/assets/cdcfd274-87b1-4e58-bcd9-70118ea234d1" />
+
+
