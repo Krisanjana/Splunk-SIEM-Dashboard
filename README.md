@@ -84,12 +84,12 @@ https://github.com/user-attachments/assets/3b7b162e-32b1-4a19-8005-bd6fb0a951a6
 
 - Enter the Search String as below:
 
-`index=auth "sshd" "invalid user"
-| stats count AS "Invalid User Attempts"`
+`source="ssh_logs_new.json" host="Krisan_Jana" sourcetype="_json"  event_type="Connection Without Authentication" | stats count as "Connection Without Authentication"`
 
 ## Lab Img
 
-<img width="1898" height="660" alt="Screenshot 2026-08-29 155352" src="https://github.com/user-attachments/assets/7b43201c-6407-4a6c-ade2-9a45de7c6605" />
+<img width="1911" height="627" alt="image" src="https://github.com/user-attachments/assets/6adcdaa3-572d-4e42-8363-138cfd75cc35" />
+
 
 
 # Task2: Login Activity Trends 
